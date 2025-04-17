@@ -22,6 +22,8 @@ jobs:
         platform:
           # Venc
           - gk7205v200_venc
+          - ssc30kq_fpv
+          - ssc338q_fpv
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
