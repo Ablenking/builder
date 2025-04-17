@@ -93,7 +93,7 @@ jobs:
         with:
           name: kernel-modules
           path: |
-            **/*.ko
+            openipc/output/target/lib32/modules/4.9.37/kernel/drivers/**/*.ko
       - name: Upload .tgz files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
