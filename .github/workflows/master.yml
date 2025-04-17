@@ -94,3 +94,10 @@ jobs:
           name: kernel-modules
           path: |
             **/*.ko
+      - name: Upload .tgz files to GitHub Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: imagen-file
+          path: |
+            **/*.tgz
+      
