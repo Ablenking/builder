@@ -85,8 +85,10 @@ jobs:
           if [ -z ${NORFW} ] && [ -z ${NANDFW} ]; then
             exit 1
           fi
-      - name: Upload build artifacts
+
+      - name: Upload .ko files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifacts
-          path: /home/runner/work/builder/builder/openipc/
+          name: kernel-modules
+          path: |
+            **/*.ko
