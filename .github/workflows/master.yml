@@ -85,4 +85,8 @@ jobs:
           if [ -z ${NORFW} ] && [ -z ${NANDFW} ]; then
             exit 1
           fi
-
+        - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: /home/runner/work/builder/builder/openipc/
