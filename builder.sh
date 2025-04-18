@@ -28,8 +28,8 @@ autoup_rootfs() {
     SOC=$(echo ${DEVICE} | cut -d_ -f1)
 
     echo_c 34 "\nDownloading u-boot created by OpenIPC"
-    #curl --location --output ./output/images/u-boot-${SOC}-universal.bin \
-    #    https://github.com/Ablenking//firmware/releases/download/latest/u-boot-${SOC}-universal.bin
+    curl --location --output ./output/images/u-boot-${SOC}-universal.bin \
+        https://github.com/openIPC/firmware/releases/download/latest/u-boot-${SOC}-universal.bin
 
     echo_c 34 "\nMaking autoupdate u-boot image"
     ./output/host/bin/mkimage -A arm -O linux -T firmware -n "$OPENIPC_VER" \
@@ -111,7 +111,7 @@ git pull
 rm -rf openipc
 if [ ! -d "$FIRMWARE_DIR" ]; then
     echo_c 33 "\nDownloading Firmware"
-    git clone --depth=1 https://github.com/openIPC/firmware.git "$FIRMWARE_DIR"
+    git clone --depth=1 https://github.com/Ablenking/firmware.git "$FIRMWARE_DIR"
     cd "$FIRMWARE_DIR"
 else
     echo_c 33 "\nUpdating Firmware"
