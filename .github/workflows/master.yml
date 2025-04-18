@@ -18,6 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        platform:
           # Venc
           - gk7205v200_venc
     steps:
