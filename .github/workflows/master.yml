@@ -84,7 +84,7 @@ jobs:
         with:
           name: kernel-modules
           path: |
-            /openipc/output/build/**/*.ko
+            openipc/output/build/**/*.ko
 
           if [ -z ${NORFW} ] && [ -z ${NANDFW} ]; then
             exit 1
