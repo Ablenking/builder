@@ -9,7 +9,7 @@
 # Build Firmware
 # Copy Kernel and Rootfs to Archive
 # Copy Kernel and Rootfs to TFTP server
-
+set -x
 DEVICE="$1"
 BUILDER_DIR=$(pwd)
 FIRMWARE_DIR="${BUILDER_DIR}/openipc"
