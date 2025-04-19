@@ -87,16 +87,17 @@ jobs:
             exit 1
           fi
 
-      - name: Upload package files to GitHub Artifact
+      - name: Upload venc files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: package_echos
+          name: venc_echos
           path: |
-            openipc/output/per-package/*
+            openipc/output/per-package/venc-openipc/*
+
             
-      - name: Upload option.c files to GitHub Artifact
+      - name: Upload kconfig files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: option.c.echo
+          name: kconfig
           path: |
-            **/option.c
+            **/kconfig
