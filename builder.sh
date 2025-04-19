@@ -119,7 +119,7 @@ else
     # git reset HEAD --hard
     # git pull --rebase
 fi
-
+sed -i 's/\@$/\$/g' Makefile
 echo_c 33 "\nCopying device files"
 cp -afv ${BUILDER_DIR}/${ITEM}/* ${FIRMWARE_DIR}
 
