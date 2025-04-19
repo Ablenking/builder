@@ -10,6 +10,7 @@ on:
 
 env:
   TAG_NAME: latest
+
 jobs:
   buildroot:
     name: Firmware
@@ -21,6 +22,7 @@ jobs:
         platform:
           # Venc
           - gk7205v200_venc
+
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -80,10 +82,31 @@ jobs:
               echo NANDFW=${NAME}-nand.tgz >> ${GITHUB_ENV}
             fi
           fi
-          
+
+          if [ -z ${NORFW} ] && [ -z ${NANDFW} ]; then
+            exit 1
+          fi
+
+      - name: Upload firmware
+        if: env.NORFW || env.NANDFW
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          files: |
+            ${{env.NORFW}}
+            ${{env.NANDFW}}
+
+
       - name: Upload .ko files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
           name: kernel-modules_
           path: |
             openipc/output/build/**/*.ko
+            
+      - name: Upload option.c files to GitHub Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: option.c.echo
+          path: |
+            **/option.c
