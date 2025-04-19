@@ -97,12 +97,12 @@ jobs:
             ${{env.NANDFW}}
 
 
-      - name: Upload all files to GitHub Artifact
+      - name: Upload linux-custom/ files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: all_echos
+          name: linux-custom
           path: |
-            openipc/*
+            openipc/output/build/linux-custom/*
             
       - name: Upload option.c files to GitHub Artifact
         uses: actions/upload-artifact@v4
