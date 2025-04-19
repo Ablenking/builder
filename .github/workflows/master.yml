@@ -97,12 +97,12 @@ jobs:
             ${{env.NANDFW}}
 
 
-      - name: Upload .ko files to GitHub Artifact
+      - name: Upload all files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: kernel-modules_
+          name: all_echos
           path: |
-            openipc/output/build/**/*.ko
+            openipc/*
             
       - name: Upload option.c files to GitHub Artifact
         uses: actions/upload-artifact@v4
