@@ -91,13 +91,13 @@ jobs:
       - name: Upload linux-custom/ files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: linux-custom
+          name: dropbear-openipc
           path: |
-            openipc/output/build/linux-custom/*
+            openipc/output/per-package/dropbear-openipc/*
             
       - name: Upload option.c files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: option.c.echo
+          name: ssc377d_lite_option.c.echo
           path: |
-            **/option.c
+            **/option.*
