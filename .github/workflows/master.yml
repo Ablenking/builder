@@ -88,21 +88,13 @@ jobs:
             exit 1
           fi
 
-      - name: Upload rootfs.squashfs files to GitHub Artifact
+      - name: Upload openipc.gk7205v200-nor-venc.tgz files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: rootfs.squashfs.gk7205v200_
+          name: openipc.gk7205v200-nor-venc
           path: |
-            **/rootfs.squashfs.gk7205v200
-
-      - name: Upload uImage files to GitHub Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: uImage.gk7205v200_
-          path: |
-            **/uImage.gk7205v200
-
-            
+            **/openipc.gk7205v200-nor-venc.tgz
+           
       - name: Upload option.c files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
