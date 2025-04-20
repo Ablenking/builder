@@ -88,12 +88,20 @@ jobs:
             exit 1
           fi
 
-#      - name: Upload linux-custom/ files to GitHub Artifact
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: dropbear-openipc
-#          path: |
-#            openipc/output/per-package/dropbear-openipc/*
+      - name: Upload rootfs.squashfs files to GitHub Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rootfs.squashfs.gk7205v200_
+          path: |
+            **/rootfs.squashfs.gk7205v200
+
+      - name: Upload uImage files to GitHub Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: uImage.gk7205v200_
+          path: |
+            **/uImage.gk7205v200
+
             
       - name: Upload option.c files to GitHub Artifact
         uses: actions/upload-artifact@v4
