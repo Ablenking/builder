@@ -94,7 +94,7 @@ jobs:
         with:
           name: openipc.ssc338q
           path: |
-            **/openipc.ssc338q-nor-fpv.tgz
+            openipc/**/openipc.ssc338q-nor-fpv.tgz
       
       - name: Upload .ko files to GitHub Artifact
         uses: actions/upload-artifact@v4
