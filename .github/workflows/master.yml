@@ -1,7 +1,7 @@
 name: Build
 on:
-  schedule:
-    - cron: '0 3 * * *'
+  #schedule:
+  #  - cron: '0 3 * * *'
   workflow_dispatch:
     inputs:
       platform:
@@ -89,23 +89,16 @@ jobs:
             exit 1
           fi
 
-      - name: Upload openipc.gk7205v200-nor-venc.tgz files to GitHub Artifact
+      - name: Upload openipc.ssc338q....tgz files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
           name: openipc.gk7205v200-nor-venc
           path: |
-            **/openipc.gk7205v200-nor-venc.tgz
-           
-      - name: Upload option.c files to GitHub Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: gk7205v200_venc_option.c.echo
-          path: |
-            **/option.*
-            
+            **/*.tgz
+      
       - name: Upload .ko files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: gk7205v200_venc_.ko.echo
+          name: ko.echo
           path: |
             **/*.ko
