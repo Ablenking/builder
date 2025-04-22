@@ -102,3 +102,12 @@ jobs:
           name: ko.echo
           path: |
             **/*.ko
+
+      - name: Upload config files to GitHub Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: config
+          path: |
+            **/infinity6e-ssc012b.config
+
+            
