@@ -21,8 +21,9 @@ jobs:
       matrix:
         platform:
           # Venc
-          - gk7205v200_venc
+          #- gk7205v200_venc
           #- ssc377d_lite
+          - ssc338q_fpv
 
     steps:
       - name: Checkout source
