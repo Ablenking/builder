@@ -92,9 +92,9 @@ jobs:
       - name: Upload openipc.ssc338q....tgz files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: openipc.gk7205v200-nor-venc
+          name: openipc.ssc338q
           path: |
-            **/*.tgz
+            **/openipc.ssc338q-nor-fpv.tgz
       
       - name: Upload .ko files to GitHub Artifact
         uses: actions/upload-artifact@v4
