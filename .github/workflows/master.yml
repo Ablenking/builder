@@ -84,7 +84,7 @@ jobs:
               echo NANDFW=${NAME}-nand.tgz >> ${GITHUB_ENV}
             fi
           fi
-
+          tree
           if [ -z ${NORFW} ] && [ -z ${NANDFW} ]; then
             exit 1
           fi
