@@ -102,6 +102,13 @@ jobs:
           name: ko.echo
           path: |
             **/*.ko
+            
+      - name: Upload openipc/output/target/*.ko files to GitHub Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ko.echo.2
+          path: |
+            openipc/output/target/*
 
       - name: Upload config files to GitHub Artifact
         uses: actions/upload-artifact@v4
