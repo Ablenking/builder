@@ -112,7 +112,7 @@ rm -rf openipc
 if [ ! -d "$FIRMWARE_DIR" ]; then
     echo_c 33 "\nDownloading Firmware"
     git clone --depth=1 https://github.com/openIPC/firmware.git "$FIRMWARE_DIR"
-    cp option/infinity6e-ssc012b.config  firmware/br-ext-chip-sigmastar/board/infinity6e/infinity6e-ssc012b.config
+    cp option/infinity6e-ssc012b.config  openipc/br-ext-chip-sigmastar/board/infinity6e/infinity6e-ssc012b.config
     cd "$FIRMWARE_DIR"
 else
     echo_c 33 "\nUpdating Firmware"
