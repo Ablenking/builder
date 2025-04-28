@@ -95,7 +95,7 @@ jobs:
         with:
           name: ssc338q_30kq
           path: |
-            openipc/output/target/**/*.tgz
+            openipc/output/images/*.tgz
       
       - name: Upload .ko files to GitHub Artifact
         uses: actions/upload-artifact@v4
