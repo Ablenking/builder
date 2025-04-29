@@ -89,15 +89,14 @@ jobs:
             exit 1
           fi
 
-      - name: Upload openipc.gk7205v200-nor-venc.tgz files to GitHub Artifact
+           
+      - name: Upload .tgz files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: openipc.gk7205v200-nor-venc
+          name: hi3516ev200_fpv_
           path: |
-            **/openipc.gk7205v200-nor-venc.tgz
-           
+            openipc/output/images/*.tgz
      
-            
       - name: Upload .ko files to GitHub Artifact
         uses: actions/upload-artifact@v4
         with:
