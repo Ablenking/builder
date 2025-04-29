@@ -21,8 +21,9 @@ jobs:
       matrix:
         platform:
           # Venc
-          - gk7205v200_venc
+          #- gk7205v200_venc
           #- ssc377d_lite
+          - hi3516ev200_fpv
 
     steps:
       - name: Checkout source
@@ -95,12 +96,7 @@ jobs:
           path: |
             **/openipc.gk7205v200-nor-venc.tgz
            
-      - name: Upload option.c files to GitHub Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: gk7205v200_venc_option.c.echo
-          path: |
-            **/option.*
+     
             
       - name: Upload .ko files to GitHub Artifact
         uses: actions/upload-artifact@v4
